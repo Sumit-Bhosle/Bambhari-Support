@@ -71,6 +71,7 @@ body {
   border-radius: 10px;
   padding: 1.5rem;
 }
+
 .form-logo {
   position: absolute;
   top: -20px;
@@ -260,3 +261,18 @@ textarea {
   height: 30px;
 }
 
+/* Common styling for all form fields */
+.sales-form .form-control {
+  border: 1px solid #8B0000;              /* Thin light gray border */
+  transition: border-color 0.3s ease;  /* Smooth transition */
+  box-shadow: none;                    /* Remove Bootstrap default shadow */
+}
+
+
+
+/* Change border color on hover */
+.sales-form .form-control:hover,
+.sales-form .form-control:focus {
+  border-color: hsl(51, 74%, 41%);               /* Blue border on hover/focus */
+  outline: none;                       /* Remove blue outline */
+}
