@@ -1,0 +1,13 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Disallow:
+
+# Optional: Block sensitive or unnecessary directories (if any)
+Disallow: /admin/
+Disallow: /login/
+
+# Optional: Crawl-delay for heavy traffic servers
+# Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.bambhari.com/sitemap.xml
