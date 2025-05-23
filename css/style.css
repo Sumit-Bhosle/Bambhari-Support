@@ -6,7 +6,6 @@ body {
 }
 .navbar-custom .nav-link {
   color: gold;
-  
 }
 .navbar-custom .nav-link.active {
   color: white;
@@ -18,11 +17,9 @@ body {
   transition: background 1s ease;
   padding: 60px 20px;
 }
-
 .hero-gradient.scrolled {
   background: linear-gradient(135deg, #997f15, hsl(51, 74%, 41%));
 }
-
 .custom-btn {
   background-color: #8B0000;
   color: white;
@@ -31,28 +28,33 @@ body {
   font-weight: bold;
   border: 2px solid white;
 }
-
 .custom-btn:hover {
   background-color: hsl(51, 74%, 41%);
   color: #8B0000;
   border: 2px solid #8B0000;
 }
 
-
 .contact-form {
   text-align: left;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  background-color: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 .contact-section {
   text-align: center;
   padding: 2rem;
+  background-color: #f9f9f9;
 }
-
 .contact-section h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-
 .contact-section p {
   color: #666;
   margin-bottom: 2rem;
@@ -69,22 +71,12 @@ body {
   border-radius: 10px;
   padding: 1.5rem;
 }
-
-.contact-form {
-  flex: 1 1 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  position: relative;
-}
-
 .form-logo {
   position: absolute;
   top: -20px;
   right: 10px;
   width: 80px;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -94,7 +86,6 @@ textarea {
   outline: none;
   font-size: 1rem;
 }
-
 textarea {
   min-height: 80px;
   resize: vertical;
@@ -104,14 +95,24 @@ textarea {
   text-align: left;
   padding-left: 1rem;
 }
-
 .radio-group label,
 .checkbox {
   display: block;
   text-align: left;
   margin-bottom: 0.5rem;
 }
-
+/* ✅ FIX: Reset Bootstrap radio button size and appearance */
+.contact-form .form-check-input[type="radio"] {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.3em;
+  vertical-align: middle;
+  accent-color: #0d6efd;
+}
+.contact-form .form-check-label {
+  margin-left: 0.5em;
+  font-weight: 500;
+}
 .radio-group input[type="radio"],
 .checkbox input[type="checkbox"] {
   margin-right: 8px;
@@ -120,23 +121,19 @@ textarea {
   margin-top: 1rem;
   text-align: left;
 }
-
 .privacy-text {
   font-size: 0.8rem;
   color: #555;
   text-align: left;
   margin-top: 0.5rem;
 }
-
 .form-image {
   flex: 1 1 300px;
 }
-
 .form-image img {
   width: 100%;
   border-radius: 20px;
 }
-
 .submit-btn {
   background-color: #000;
   color: #fff;
@@ -149,14 +146,8 @@ textarea {
   margin-top: 1rem;
   align-self: center;
 }
-
 .submit-btn:hover {
   background-color: #222;
-}
-
-.contact-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
 }
 
 .form-map-wrapper {
@@ -166,23 +157,11 @@ textarea {
   justify-content: center;
   align-items: flex-start;
 }
-
-.contact-form {
-  flex: 1 1 400px;
-  background-color: #f0f4f8;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-
-
 .contact-form label {
   display: block;
   margin-top: 1rem;
   font-weight: bold;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -192,7 +171,6 @@ textarea {
   border-radius: 10px;
   font-size: 1rem;
 }
-
 .map-container {
   flex: 1 1 400px;
   height: 600px;
@@ -200,18 +178,6 @@ textarea {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-.rounded-lg {
-  border-radius: 1rem;
-}
-.btn-outline-dark-custom {
-  border: 2px solid black;
-  padding: 10px 30px;
-  border-radius: 2rem;
-  font-weight: 500;
-}
-
-
 .rounded-lg {
   border-radius: 1rem;
 }
@@ -235,13 +201,11 @@ textarea {
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-
 .footer {
   background-color: #8B0000;
   color: white;
   padding: 1.5rem;
 }
-
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -249,32 +213,50 @@ textarea {
   flex-wrap: wrap;
   text-align: center;
 }
-
 .footer-left, .footer-center, .footer-right {
   flex: 1 1 300px;
   margin: 10px;
 }
-
 .footer-logo {
   max-height: 50px;
   display: block;
   margin: 0 auto 10px;
 }
-
 .footer-center a {
   margin: 0 8px;
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
 }
-
 .footer-center a:hover {
   color: #ccc;
 }
-
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
 }
+
+/* WHATSAPP FLOATING LOGO */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
